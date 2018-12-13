@@ -75,7 +75,7 @@ gulp.task('uglify', function (done) {
         })
         .pipe(source(concatName.js)) //vinyl object 로 변환
         .pipe(buffer()) //buffered vinyl object 로 변환
-        .pipe(uglify())
+        .pipe(uglify()) //js minify
         .pipe(gulp.dest(distPath.js)) //위에 설정된 dist 폴더에 저장
         .pipe(browserSync.reload({stream:true}));
     done();
@@ -84,10 +84,12 @@ gulp.task('uglify', function (done) {
 // 이미지 압축
 gulp.task('imagemin', function (done) {
     gulp.src(srcPath.images+'*')
-        .pipe(newer('src'))
-        .pipe(imagemin({ optimizationLevel: 5, progressive: true, interlaced: true }))
-        .pipe(gulp.dest(srcPath.images))
-        .pipe(gulp.dest(distPath.images));
+        .pipe(newer('src')) //src폴더내부의 변경이 있는 파일을 확인
+        .pipe(imagemin({ 
+            optimizationLevel: 5, progressive: true, interlaced: true 
+        })) //이미지 최적화
+        .pipe(gulp.dest(srcPath.images)) //최적화 이미지를 src에 출력
+        .pipe(gulp.dest(distPath.images)); //동시에 dist에도 출력
     done();
 });
 
