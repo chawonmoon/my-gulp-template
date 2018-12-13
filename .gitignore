@@ -165,3 +165,7 @@ modules.xml
 *.ipr
 
 # End of https://www.gitignore.io/api/node,webstorm+all
+
+
+# gulp distribution directories name
+dist
