@@ -38,7 +38,7 @@ var concatName = {
 gulp.task('server', function (done) {
     browserSync.init({
         server: {
-            baseDir: './dist'
+            baseDir: './dist' // 웹서버 root폴더 경로 지정
         }
     });
     done();
@@ -107,4 +107,4 @@ gulp.task('watch', function (done) {
 // gulp를 실행하면 default 로 server task와 watch task, imagemin task를 실행
 // series = 순차
 // parallel = 동시 or 병렬(실행은 동시에 시작되지만 처리속도에 따라 종료시점이 달라진다)
-gulp.task('default', gulp.series('server', 'watch', 'imagemin'));
+gulp.task('default', gulp.series('uglify', 'minifycss', 'minifyhtml', 'imagemin', gulp.parallel('watch', 'server')));
