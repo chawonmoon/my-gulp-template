@@ -165,12 +165,12 @@ gulp.task('default', gulp.series('uglify', 'minifycss', 'minifyhtml', 'imagemin'
 ```
 
 ## I think...
->1. 기본적으로 JavaScript는 어느정도 알아야 셋팅이 가능하고, `Node.js / NPM / 모듈시스템`의 대략적인 개념을 안다면 훨신 효율이 좋을것으로 생각된다.  
->1. 3.9대 버전에서 4.0대 버전으로 넘어오면서 구문과 스펙의 변경이 생겨 조금 삽질함.  
+- 기본적으로 JavaScript는 어느정도 알아야 셋팅이 가능하고, `Node.js / NPM / 모듈시스템`의 대략적인 개념을 안다면 훨신 효율이 좋을것으로 생각된다.  
+- 3.9대 버전에서 4.0대 버전으로 넘어오면서 구문과 스펙의 변경이 생겨 조금 삽질함.  
 
 ## AS-IS
->1. ES6로 재작업 
->1. `imagemin` `browserify` 설정과 `browser-sync`에 대한 이해가 더 필요함.  
->1. `browserify`를 포함하긴 했으나 사실 JS 번들링에 대한 필요성에 대해서는 잘모르겠다, 아무래도 `Babel`을 사용해보면 감이 오지 않을까 싶다  
->1. `browser-sync`로 서버를 실행시킬때 기본 실행브라우저를 바꾸는 방법을 옵션에서 찾아야함.
+- ES6로 재작업 
+- `imagemin` `browserify` 설정과 `browser-sync`에 대한 이해가 더 필요함.  
+- `browserify`를 포함하긴 했으나 사실 JS 번들링에 대한 필요성에 대해서는 잘모르겠다, 아무래도 `Babel`을 사용해보면 감이 오지 않을까 싶다  
+- `browser-sync`로 서버를 실행시킬때 기본 실행브라우저를 바꾸는 방법을 옵션에서 찾아야함.
  
