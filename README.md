@@ -61,7 +61,8 @@ gulp.task('server', function (done) {
     browserSync.init({
         server: {
             baseDir: './dist' // 웹서버 root폴더 경로 지정
-        }
+        },
+        browser: ["chrome", "firefox"] // 원하는 브라우저로 실행한다
     });
     done();
 });
@@ -172,5 +173,4 @@ gulp.task('default', gulp.series('uglify', 'minifycss', 'minifyhtml', 'imagemin'
 - ES6로 재작업 
 - `imagemin` `browserify` 설정과 `browser-sync`에 대한 이해가 더 필요함.  
 - `browserify`를 포함하긴 했으나 사실 JS 번들링에 대한 필요성에 대해서는 잘모르겠다, 아무래도 `Babel`을 사용해보면 감이 오지 않을까 싶다  
-- `browser-sync`로 서버를 실행시킬때 기본 실행브라우저를 바꾸는 방법을 옵션에서 찾아야함.
  
