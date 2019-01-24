@@ -39,7 +39,8 @@ gulp.task('server', function (done) {
     browserSync.init({
         server: {
             baseDir: './dist' // 웹서버 root폴더 경로 지정
-        }
+        },
+        browser: ["chrome", "firefox"] // 원하는 브라우저로 실행한다
     });
     done();
 });
