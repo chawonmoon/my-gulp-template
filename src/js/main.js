@@ -1,6 +1,6 @@
-(function () {
-    var dummy1 = require('./modules/dummy1');
-    var dummy2 = require('./modules/dummy2');
-    dummy1();
-    dummy2();
-})();
+import {random} from './modules/util';
+
+const randomOne = random(10);
+const randomTwo = random(20);
+
+console.log( `${randomOne} ${randomTwo}` );
